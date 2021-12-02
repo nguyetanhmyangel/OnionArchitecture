@@ -1,4 +1,5 @@
-﻿//using AutoMapper;
+﻿using System.Reflection;
+using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OnionArchitecture.Application.Interfaces.Contexts;
