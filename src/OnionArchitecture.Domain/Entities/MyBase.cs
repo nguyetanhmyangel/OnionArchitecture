@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace OnionArchitecture.Domain.Entities
 {
     [Table("KnowledgeBases")]
-    public class KnowledgeBase : AuditableBaseEntity<int>
+    public class MyBase : AuditableBaseEntity<int>
     {
         public int CategoryId { get; set; }
 

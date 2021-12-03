@@ -24,7 +24,7 @@ namespace OnionArchitecture.Application.Interfaces.Contexts
         DbSet<Function> Functions { get; set; }
         DbSet<KnowledgeBase> KnowledgeBases { get; set; }
         DbSet<Label> Labels { get; set; }
-        DbSet<LabelKnowledgeBase> LabelKnowledgeBases { get; set; }
+        DbSet<LabelMyBase> LabelKnowledgeBases { get; set; }
         DbSet<Privilege> Privileges { get; set; }
         DbSet<Report> Reports { get; set; }
         DbSet<Vote> Votes { get; set; }

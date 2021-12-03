@@ -3,13 +3,117 @@
     <assembly>
         <name>OnionArchitecture.Api</name>
     </assembly>
-	<members>
-		<member name="M:OnionArchitecture.Api.Controllers.IdentityController.GetTokenAsync(OnionArchitecture.Application.DTOs.Identity.TokenRequest)">
-			<summary>
-				Generates a JSON Web Token for a valid combination of emailId and password.
-			</summary>
-			<param name="tokenRequest"></param>
-			<returns></returns>
-		</member>
-	</members>
+    <members>
+        <member name="T:OnionArchitecture.Api.Extensions.ApplicationBuilderExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OnionArchitecture.Api.Extensions.ApplicationBuilderExtensions.ConfigureSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:OnionArchitecture.Api.Extensions.ServiceCollectionExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OnionArchitecture.Api.Extensions.ServiceCollectionExtensions.AddSharedInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Config add share Services / Api project
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OnionArchitecture.Api.Extensions.ServiceCollectionExtensions.AddEssentials(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+             config add Swagger and Version /Api project
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:OnionArchitecture.Api.Extensions.ServiceCollectionExtensions.AddContextInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            config add IdentityContext ,ApplicationDbContext,IdentityService and JwtBearer /Api project
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:OnionArchitecture.Api.Middlewares.ErrorHandlerMiddleware">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OnionArchitecture.Api.Middlewares.ErrorHandlerMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:OnionArchitecture.Api.Middlewares.ErrorHandlerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:OnionArchitecture.Api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OnionArchitecture.Api.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:OnionArchitecture.Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OnionArchitecture.Api.Services.AuthenticatedUserService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OnionArchitecture.Api.Services.AuthenticatedUserService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="T:OnionArchitecture.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OnionArchitecture.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:OnionArchitecture.Api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OnionArchitecture.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:OnionArchitecture.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
 </doc>

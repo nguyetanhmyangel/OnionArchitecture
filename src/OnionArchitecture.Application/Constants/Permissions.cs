@@ -72,12 +72,12 @@ namespace OnionArchitecture.Application.Constants
             public const string Delete = "Permissions.Functions.Delete";
         }
 
-        public static class KnowledgeBases
+        public static class MyBases
         {
-            public const string View = "Permissions.KnowledgeBases.View";
-            public const string Create = "Permissions.KnowledgeBases.Create";
-            public const string Edit = "Permissions.KnowledgeBases.Edit";
-            public const string Delete = "Permissions.KnowledgeBases.Delete";
+            public const string View = "Permissions.MyBases.View";
+            public const string Create = "Permissions.MyBases.Create";
+            public const string Edit = "Permissions.MyBases.Edit";
+            public const string Delete = "Permissions.MyBases.Delete";
         }
 
         public static class Labels
@@ -88,12 +88,12 @@ namespace OnionArchitecture.Application.Constants
             public const string Delete = "Permissions.Labels.Delete";
         }
 
-        public static class LabelKnowledgeBases
+        public static class LabelMyBases
         {
-            public const string View = "Permissions.LabelKnowledgeBases.View";
-            public const string Create = "Permissions.LabelKnowledgeBases.Create";
-            public const string Edit = "Permissions.LabelKnowledgeBases.Edit";
-            public const string Delete = "Permissions.LabelKnowledgeBases.Delete";
+            public const string View = "Permissions.LabelMyBases.View";
+            public const string Create = "Permissions.LabelMyBases.Create";
+            public const string Edit = "Permissions.LabelMyBases.Edit";
+            public const string Delete = "Permissions.LabelMyBases.Delete";
         }
 
         public static class Privileges

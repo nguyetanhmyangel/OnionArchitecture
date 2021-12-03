@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using AutoMapper;
+//using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OnionArchitecture.Application.Interfaces.Contexts;
@@ -11,7 +11,7 @@ namespace OnionArchitecture.Infrastructure.Extensions
     {
         public static void AddPersistenceContexts(this IServiceCollection services, IConfiguration configuration)
         {
-            //services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
         }
 

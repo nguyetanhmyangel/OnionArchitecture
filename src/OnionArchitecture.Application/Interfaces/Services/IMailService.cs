@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-//using MySpace.Application.DTOs.Mail;
+using OnionArchitecture.Application.DTOs.Mail;
 
 namespace OnionArchitecture.Application.Interfaces.Services
 {
     public interface IMailService
     {
-        //Task SendAsync(MailRequest request);
+        Task SendAsync(MailRequest request);
     }
 }

@@ -29,7 +29,7 @@ namespace OnionArchitecture.Infrastructure.Contexts
         public DbSet<Function> Functions { get; set; }
         public DbSet<KnowledgeBase> KnowledgeBases { get; set; }
         public DbSet<Label> Labels { get; set; }
-        public DbSet<LabelKnowledgeBase> LabelKnowledgeBases { get; set; }
+        public DbSet<LabelMyBase> LabelKnowledgeBases { get; set; }
         public DbSet<Privilege> Privileges { get; set; }
         public DbSet<Report> Reports { get; set; }
         public DbSet<Vote> Votes { get; set; }
