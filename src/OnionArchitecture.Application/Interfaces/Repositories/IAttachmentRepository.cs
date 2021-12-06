@@ -9,13 +9,10 @@ namespace OnionArchitecture.Application.Interfaces.Repositories
     {
         IQueryable<Attachment> Attachments { get; }
 
-        Task<List<Attachment>> GetCachedListAsync();
 
         Task<List<Attachment>> GetListAsync();
 
         Task<Attachment> GetByIdAsync(int attachmentId);
-
-        Task<Attachment> GetCachedByIdAsync(int attachmentId);
 
         Task<int> InsertAsync(Attachment attachmentId);
 

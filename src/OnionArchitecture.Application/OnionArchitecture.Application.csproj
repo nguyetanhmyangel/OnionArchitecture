@@ -20,4 +20,17 @@
     <ProjectReference Include="..\OnionArchitecture.Infrastructure.Share\OnionArchitecture.Infrastructure.Share.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\CommandFunctions\" />
+    <Folder Include="Features\Commands\" />
+    <Folder Include="Features\Comments\" />
+    <Folder Include="Features\Functions\" />
+    <Folder Include="Features\LabelMyBases\" />
+    <Folder Include="Features\Labels\" />
+    <Folder Include="Features\MyBases\" />
+    <Folder Include="Features\Privileges\" />
+    <Folder Include="Features\Reports\" />
+    <Folder Include="Features\Votes\" />
+  </ItemGroup>
+
 </Project>

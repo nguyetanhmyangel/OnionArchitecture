@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using OnionArchitecture.Domain.Entities;
+
 
 namespace OnionArchitecture.Application.Interfaces.Repositories
 {

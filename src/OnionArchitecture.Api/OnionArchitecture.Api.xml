@@ -35,7 +35,7 @@
         </member>
         <member name="M:OnionArchitecture.Api.Extensions.ServiceCollectionExtensions.AddContextInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
-            config add IdentityContext ,ApplicationDbContext,IdentityService and JwtBearer /Api project
+            Config in Api project
             </summary>
             <param name="services"></param>
             <param name="configuration"></param>
@@ -58,22 +58,22 @@
             <param name="context"></param>
         </member>
         <member name="T:OnionArchitecture.Api.Program">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="M:OnionArchitecture.Api.Program.Main(System.String[])">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="args"></param>
+             </summary>
+             <param name="args"></param>
         </member>
         <member name="M:OnionArchitecture.Api.Program.CreateHostBuilder(System.String[])">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="args"></param>
-            <returns></returns>
+             </summary>
+             <param name="args"></param>
+             <returns></returns>
         </member>
         <member name="T:OnionArchitecture.Api.Services.AuthenticatedUserService">
             <summary>
@@ -96,11 +96,6 @@
             
             </summary>
             <param name="configuration"></param>
-        </member>
-        <member name="P:OnionArchitecture.Api.Startup.Configuration">
-            <summary>
-            
-            </summary>
         </member>
         <member name="M:OnionArchitecture.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>

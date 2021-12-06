@@ -27,7 +27,7 @@ namespace OnionArchitecture.Infrastructure.Contexts
         public DbSet<CommandFunction> CommandFunctions { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Function> Functions { get; set; }
-        public DbSet<KnowledgeBase> KnowledgeBases { get; set; }
+        public DbSet<MyBase> KnowledgeBases { get; set; }
         public DbSet<Label> Labels { get; set; }
         public DbSet<LabelMyBase> LabelKnowledgeBases { get; set; }
         public DbSet<Privilege> Privileges { get; set; }
