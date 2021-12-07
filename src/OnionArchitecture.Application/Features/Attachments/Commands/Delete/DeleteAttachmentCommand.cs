@@ -6,11 +6,11 @@ using OnionArchitecture.Infrastructure.Share.Results;
 
 namespace OnionArchitecture.Application.Features.Attachments.Commands.Delete
 {
-    public class DeleteCategoryCommand : IRequest<Result<int>>
+    public class DeleteAttachmentCommand : IRequest<Result<int>>
     {
         public int Id { get; set; }
 
-        public class DeleteAttachmentCommandHandler : IRequestHandler<DeleteCategoryCommand, Result<int>>
+        public class DeleteAttachmentCommandHandler : IRequestHandler<DeleteAttachmentCommand, Result<int>>
         {
             private readonly IAttachmentRepository _attachmentRepository;
             private readonly IUnitOfWork _unitOfWork;
@@ -21,7 +21,7 @@ namespace OnionArchitecture.Application.Features.Attachments.Commands.Delete
                 _unitOfWork = unitOfWork;
             }
 
-            public async Task<Result<int>> Handle(DeleteCategoryCommand command, CancellationToken cancellationToken)
+            public async Task<Result<int>> Handle(DeleteAttachmentCommand command, CancellationToken cancellationToken)
             {
                 var attachment = await _attachmentRepository.GetByIdAsync(command.Id);
                 await _attachmentRepository.DeleteAsync(attachment);

@@ -1,9 +1,11 @@
-﻿using OnionArchitecture.Domain.Abstractions;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using OnionArchitecture.Domain.Abstractions;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnionArchitecture.Domain.Entities
 {
-    [Table("KnowledgeBases")]
+    [Table("MyBases")]
     public class MyBase : AuditableBaseEntity<int>
     {
         public int CategoryId { get; set; }
@@ -26,8 +28,6 @@ namespace OnionArchitecture.Domain.Entities
 
         public string Note { get; set; }
 
-        public string UserId { get; set; }
-
         public string Labels { get; set; }
 
         public int? NumberOfComments { get; set; }
@@ -36,6 +36,6 @@ namespace OnionArchitecture.Domain.Entities
 
         public int? NumberOfReports { get; set; }
 
-        public int? ViewCount { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

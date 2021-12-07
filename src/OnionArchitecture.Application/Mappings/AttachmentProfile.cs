@@ -9,6 +9,7 @@ using OnionArchitecture.Application.Features.Attachments.Commands.Create;
 using OnionArchitecture.Application.Features.Attachments.Queries.GetAll;
 using OnionArchitecture.Application.Features.Attachments.Queries.GetById;
 using OnionArchitecture.Domain.Entities;
+using CreateCommentCommand = OnionArchitecture.Application.Features.Categories.Commands.Create.CreateCommentCommand;
 
 namespace OnionArchitecture.Application.Mappings
 {
@@ -16,8 +17,8 @@ namespace OnionArchitecture.Application.Mappings
     {
         public AttachmentProfile()
         {
-            CreateMap<CreateCategoryCommand, Attachment>().ReverseMap();
-            CreateMap<GetAttachmentByIdResponse, Attachment>().ReverseMap();
+            CreateMap<CreateCommentCommand, Attachment>().ReverseMap();
+            CreateMap<GetCategoryByIdResponse, Attachment>().ReverseMap();
             CreateMap<GetAllCategoriesResponse, Attachment>().ReverseMap();
             CreateMap<GetAllCategoriesResponse, Attachment>().ReverseMap();
         }

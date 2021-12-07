@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using MediatR;
 using OnionArchitecture.Application.Interfaces.Repositories;
-using OnionArchitecture.Domain.Entities;
 using OnionArchitecture.Infrastructure.Share.Results;
 
 namespace OnionArchitecture.Application.Features.Categories.Commands.Update
@@ -41,12 +40,9 @@ namespace OnionArchitecture.Application.Features.Categories.Commands.Update
                     category.Name = command.Name ?? category.Name;
                     category.SeoAlias = command.SeoAlias ?? category.SeoAlias;
                     category.SeoDescription = command.SeoDescription ?? category.SeoDescription;
-                    if (command.SortOrder == 0)
-                        category.SortOrder = category.SortOrder;
-                    else
-                        category.SortOrder = command.SortOrder;
-                    category.FileType = command.FileName ?? category.FileName;
-                    category.KnowledgeBaseId = (command.KnowledgeBaseId == 0) ? category.KnowledgeBaseId : command.KnowledgeBaseId;
+                    category.SortOrder = (command.SortOrder == 0) ? category.SortOrder : command.SortOrder;
+                    category.ParentId = (command.ParentId == 0) ? category.ParentId : command.ParentId;
+                    category.NumberOfTickets = (command.NumberOfTickets == 0) ? category.NumberOfTickets : command.NumberOfTickets;
                     await _categoryRepository.UpdateAsync(category);
                     await _unitOfWork.Commit(cancellationToken);
                     return await Result<int>.SuccessAsync(category.Id);

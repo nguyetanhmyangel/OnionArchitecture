@@ -6,8 +6,9 @@ namespace OnionArchitecture.Domain.Entities
     [Table("Reports")]
     public class Report :AuditableBaseEntity<int>
     {
-        public int KnowledgeBaseId { get; set; }
+        public int MyBaseId { get; set; }
         public string Content { get; set; }
         public bool IsProcessed { get; set; }
+        public virtual MyBase MyBase { get; set; }
     }
 }

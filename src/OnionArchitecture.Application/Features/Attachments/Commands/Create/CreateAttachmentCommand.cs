@@ -8,16 +8,19 @@ using OnionArchitecture.Infrastructure.Share.Results;
 
 namespace OnionArchitecture.Application.Features.Attachments.Commands.Create
 {
-    public partial class CreateCategoryCommand : IRequest<Result<int>>
+    public partial class CreateAttachmentCommand : IRequest<Result<int>>
     {
+        public int Id { get; set; }
         public string FileName { get; set; }
         public string FilePath { get; set; }
         public string FileType { get; set; }
         public long FileSize { get; set; }
-        public int KnowledgeBaseId { get; set; }
+        public string Type { get; set; }
+        public int? MyBaseId { get; set; }
+        public int? CommentId { get; set; }
     }
 
-    public class CreateAttachmentCommandHandler : IRequestHandler<CreateCategoryCommand, Result<int>>
+    public class CreateAttachmentCommandHandler : IRequestHandler<CreateAttachmentCommand, Result<int>>
     {
         private readonly IAttachmentRepository _attachmentRepository;
         private readonly IMapper _mapper;
@@ -31,7 +34,7 @@ namespace OnionArchitecture.Application.Features.Attachments.Commands.Create
             _mapper = mapper;
         }
 
-        public async Task<Result<int>> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
+        public async Task<Result<int>> Handle(CreateAttachmentCommand request, CancellationToken cancellationToken)
         {
             var attachment = _mapper.Map<Attachment>(request);
             await _attachmentRepository.InsertAsync(attachment);

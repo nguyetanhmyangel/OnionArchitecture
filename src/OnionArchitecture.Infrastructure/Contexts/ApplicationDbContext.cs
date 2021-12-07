@@ -23,8 +23,8 @@ namespace OnionArchitecture.Infrastructure.Contexts
 
         public DbSet<Attachment> Attachments { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Command> Commands { get; set; }
-        public DbSet<CommandFunction> CommandFunctions { get; set; }
+        public DbSet<Enjoin> Enjoins { get; set; }
+        public DbSet<EnjoinFunction> EnjoinFunctions { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Function> Functions { get; set; }
         public DbSet<MyBase> KnowledgeBases { get; set; }

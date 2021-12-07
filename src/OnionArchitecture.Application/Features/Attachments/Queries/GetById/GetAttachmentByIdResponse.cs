@@ -1,4 +1,6 @@
-﻿namespace OnionArchitecture.Application.Features.Attachments.Queries.GetById
+﻿using OnionArchitecture.Domain.Entities;
+
+namespace OnionArchitecture.Application.Features.Attachments.Queries.GetById
 {
     public class GetAttachmentByIdResponse
     {
@@ -7,6 +9,8 @@
         public string FilePath { get; set; }
         public string FileType { get; set; }
         public long FileSize { get; set; }
-        public int KnowledgeBaseId { get; set; }
+        public string Type { get; set; }
+        public int? MyBaseId { get; set; }
+        public int? CommentId { get; set; }
     }
 }

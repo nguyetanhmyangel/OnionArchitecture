@@ -4,29 +4,29 @@ using MediatR;
 using OnionArchitecture.Application.Interfaces.Repositories;
 using OnionArchitecture.Infrastructure.Share.Results;
 
-namespace OnionArchitecture.Application.Features.Attachments.Commands.Delete
+namespace OnionArchitecture.Application.Features.Categories.Commands.Delete
 {
     public class DeleteCategoryCommand : IRequest<Result<int>>
     {
         public int Id { get; set; }
 
-        public class DeleteAttachmentCommandHandler : IRequestHandler<DeleteCategoryCommand, Result<int>>
+        public class DeleteCategoryCommandHandler : IRequestHandler<DeleteCategoryCommand, Result<int>>
         {
-            private readonly IAttachmentRepository _attachmentRepository;
+            private readonly ICategoryRepository _categoryRepository;
             private readonly IUnitOfWork _unitOfWork;
 
-            public DeleteAttachmentCommandHandler(IAttachmentRepository attachmentRepository, IUnitOfWork unitOfWork)
+            public DeleteCategoryCommandHandler(ICategoryRepository categoryRepository, IUnitOfWork unitOfWork)
             {
-                _attachmentRepository = attachmentRepository;
+                _categoryRepository = categoryRepository;
                 _unitOfWork = unitOfWork;
             }
 
             public async Task<Result<int>> Handle(DeleteCategoryCommand command, CancellationToken cancellationToken)
             {
-                var attachment = await _attachmentRepository.GetByIdAsync(command.Id);
-                await _attachmentRepository.DeleteAsync(attachment);
+                var category = await _categoryRepository.GetByIdAsync(command.Id);
+                await _categoryRepository.DeleteAsync(category);
                 await _unitOfWork.Commit(cancellationToken);
-                return await Result<int>.SuccessAsync(attachment.Id);
+                return await Result<int>.SuccessAsync(category.Id);
             }
         }
     }

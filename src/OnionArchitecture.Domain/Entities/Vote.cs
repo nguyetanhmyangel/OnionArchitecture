@@ -6,6 +6,7 @@ namespace OnionArchitecture.Domain.Entities
     [Table("Votes")]
     public class Vote : AuditableBaseEntity<int>
     {
-        public int KnowledgeBaseId { get; set; }
+        public int MyBaseId { get; set; }
+        public virtual MyBase MyBase { get; set; }
     }
 }

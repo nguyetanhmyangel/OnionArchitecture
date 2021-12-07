@@ -21,9 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\CommandFunctions\" />
-    <Folder Include="Features\Commands\" />
-    <Folder Include="Features\Comments\" />
     <Folder Include="Features\Functions\" />
     <Folder Include="Features\LabelMyBases\" />
     <Folder Include="Features\Labels\" />
