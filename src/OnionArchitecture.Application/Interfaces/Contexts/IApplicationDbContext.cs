@@ -22,9 +22,9 @@ namespace OnionArchitecture.Application.Interfaces.Contexts
         DbSet<EnjoinFunction> EnjoinFunctions { get; set; }
         DbSet<Comment> Comments { get; set; }
         DbSet<Function> Functions { get; set; }
-        DbSet<MyBase> KnowledgeBases { get; set; }
+        DbSet<MySpace> KnowledgeBases { get; set; }
         DbSet<Label> Labels { get; set; }
-        DbSet<LabelMyBase> LabelKnowledgeBases { get; set; }
+        DbSet<LabelMySpace> LabelKnowledgeBases { get; set; }
         DbSet<Privilege> Privileges { get; set; }
         DbSet<Report> Reports { get; set; }
         DbSet<Vote> Votes { get; set; }

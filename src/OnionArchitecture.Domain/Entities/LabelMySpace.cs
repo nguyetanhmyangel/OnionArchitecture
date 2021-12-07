@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnionArchitecture.Domain.Entities
 {
-    [Table("LabelMyBases")]
-    public class LabelMyBase : AuditableBaseEntity<int>
+    [Table("LabelMySpaces")]
+    public class LabelMySpace : AuditableBaseEntity<int>
     {
-        public int MyBaseId { get; set; }
+        public int MySpaceId { get; set; }
         public int LabelId { get; set; }
-        public virtual MyBase MyBase { get; set; }
+        public virtual MySpace MySpace { get; set; }
         public virtual Label Label { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace OnionArchitecture.Domain.Entities
         public string Type { get; set; }
         public int? MyBaseId { get; set; }
         public int? CommentId { get; set; }
-        public virtual MyBase MyBase { get; set; }
+        public virtual MySpace MySpace { get; set; }
         public virtual Comment Comment { get; set; }
     }
 }

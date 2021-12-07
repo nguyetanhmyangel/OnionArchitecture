@@ -1,42 +1,38 @@
-﻿using AspNetCoreHero.Boilerplate.Application.Interfaces.Repositories;
-using AspNetCoreHero.Boilerplate.Domain.Entities.Catalog;
-using AspNetCoreHero.Results;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
+using OnionArchitecture.Application.Interfaces.Repositories;
+using OnionArchitecture.Domain.Entities;
+using OnionArchitecture.Infrastructure.Share.Results;
 
-namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Commands.Create
+namespace OnionArchitecture.Application.Features.Enjoins.Commands.Create
 {
     public partial class CreateEnjoinCommand : IRequest<Result<int>>
     {
         public string Name { get; set; }
-        public string Barcode { get; set; }
-        public string Description { get; set; }
-        public decimal Rate { get; set; }
-        public int BrandId { get; set; }
     }
 
-    public class CreateProductCommandHandler : IRequestHandler<CreateEnjoinCommand, Result<int>>
+    public class CreateEnjoinCommandHandler : IRequestHandler<CreateEnjoinCommand, Result<int>>
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IEnjoinRepository _enjoinRepository;
         private readonly IMapper _mapper;
 
         private IUnitOfWork _unitOfWork { get; set; }
 
-        public CreateProductCommandHandler(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper)
+        public CreateEnjoinCommandHandler(IEnjoinRepository enjoinRepository, IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _productRepository = productRepository;
+            _enjoinRepository = enjoinRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
         public async Task<Result<int>> Handle(CreateEnjoinCommand request, CancellationToken cancellationToken)
         {
-            var product = _mapper.Map<Product>(request);
-            await _productRepository.InsertAsync(product);
+            var enjoin = _mapper.Map<Enjoin>(request);
+            await _enjoinRepository.InsertAsync(enjoin);
             await _unitOfWork.Commit(cancellationToken);
-            return Result<int>.Success(product.Id);
+            return await Result<int>.SuccessAsync(enjoin.Id);
         }
     }
 }

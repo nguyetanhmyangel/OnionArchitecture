@@ -7,7 +7,7 @@ namespace OnionArchitecture.Domain.Entities
     public class Comment : AuditableBaseEntity<int>
     {
         public string Content { get; set; }
-        public int MyBaseId { get; set; }
-        public virtual MyBase MyBase { get; set; }
+        public int MySpaceId { get; set; }
+        public virtual MySpace MySpace { get; set; }
     }
 }

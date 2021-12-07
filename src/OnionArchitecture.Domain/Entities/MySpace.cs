@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnionArchitecture.Domain.Entities
 {
-    [Table("MyBases")]
-    public class MyBase : AuditableBaseEntity<int>
+    [Table("MySpaces")]
+    public class MySpace : AuditableBaseEntity<int>
     {
         public int CategoryId { get; set; }
 

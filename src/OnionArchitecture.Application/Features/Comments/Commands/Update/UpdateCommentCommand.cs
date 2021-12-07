@@ -33,7 +33,7 @@ namespace OnionArchitecture.Application.Features.Comments.Commands.Update
                 }
 
                 comment.Content = command.Content ?? comment.Content;
-                comment.MyBaseId = (command.MyBaseId == 0) ? comment.MyBaseId : command.MyBaseId;
+                comment.MySpaceId = (command.MyBaseId == 0) ? comment.MySpaceId : command.MyBaseId;
                 await _commentRepository.UpdateAsync(comment);
                 await _unitOfWork.Commit(cancellationToken);
                 return await Result<int>.SuccessAsync(comment.Id);

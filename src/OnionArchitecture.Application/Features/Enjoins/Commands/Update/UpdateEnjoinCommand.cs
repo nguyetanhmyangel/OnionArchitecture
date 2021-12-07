@@ -1,47 +1,41 @@
-﻿using AspNetCoreHero.Boilerplate.Application.Interfaces.Repositories;
-using AspNetCoreHero.Results;
-using MediatR;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
+using MediatR;
+using OnionArchitecture.Application.Interfaces.Repositories;
+using OnionArchitecture.Infrastructure.Share.Results;
 
-namespace AspNetCoreHero.Boilerplate.Application.Features.Products.Commands.Update
+namespace OnionArchitecture.Application.Features.Enjoins.Commands.Update
 {
     public class UpdateEnjoinCommand : IRequest<Result<int>>
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Rate { get; set; }
-        public int BrandId { get; set; }
 
-        public class UpdateProductCommandHandler : IRequestHandler<UpdateEnjoinCommand, Result<int>>
+        public class UpdateEnjoinCommandHandler : IRequestHandler<UpdateEnjoinCommand, Result<int>>
         {
             private readonly IUnitOfWork _unitOfWork;
-            private readonly IProductRepository _productRepository;
+            private readonly IEnjoinRepository _enjoinRepository;
 
-            public UpdateProductCommandHandler(IProductRepository productRepository, IUnitOfWork unitOfWork)
+            public UpdateEnjoinCommandHandler(IEnjoinRepository enjoinRepository, IUnitOfWork unitOfWork)
             {
-                _productRepository = productRepository;
+                _enjoinRepository = enjoinRepository;
                 _unitOfWork = unitOfWork;
             }
 
             public async Task<Result<int>> Handle(UpdateEnjoinCommand command, CancellationToken cancellationToken)
             {
-                var product = await _productRepository.GetByIdAsync(command.Id);
+                var enjoin = await _enjoinRepository.GetByIdAsync(command.Id);
 
-                if (product == null)
+                if (enjoin == null)
                 {
-                    return Result<int>.Fail($"Product Not Found.");
+                    return await Result<int>.FailAsync($"Enjoin Not Found.");
                 }
                 else
                 {
-                    product.Name = command.Name ?? product.Name;
-                    product.Rate = (command.Rate == 0) ? product.Rate : command.Rate;
-                    product.Description = command.Description ?? product.Description;
-                    product.BrandId = (command.BrandId == 0) ? product.BrandId : command.BrandId;
-                    await _productRepository.UpdateAsync(product);
+                    enjoin.Name = command.Name ?? enjoin.Name;
+                    await _enjoinRepository.UpdateAsync(enjoin);
                     await _unitOfWork.Commit(cancellationToken);
-                    return Result<int>.Success(product.Id);
+                    return await Result<int>.SuccessAsync(enjoin.Id);
                 }
             }
         }

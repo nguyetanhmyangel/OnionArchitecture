@@ -11,33 +11,33 @@ using System.Threading.Tasks;
 
 namespace OnionArchitecture.Infrastructure.Repositories
 {
-    public class LabelMyBaseRepository : ILabelMyBaseRepository
+    public class LabelMySpaceRepository : ILabelMySpaceRepository
     {
-        private readonly IRepositoryAsync<LabelMyBase> _repository;
+        private readonly IRepositoryAsync<LabelMySpace> _repository;
         private readonly IDistributedCache _distributedCache;
 
-        public LabelMyBaseRepository(IDistributedCache distributedCache, IRepositoryAsync<LabelMyBase> repository)
+        public LabelMySpaceRepository(IDistributedCache distributedCache, IRepositoryAsync<LabelMySpace> repository)
         {
             _distributedCache = distributedCache;
             _repository = repository;
         }
 
-        public IQueryable<LabelMyBase> LabelMyBases => _repository.Entities;
+        public IQueryable<LabelMySpace> LabelMySpaces => _repository.Entities;
 
-        public async Task DeleteAsync(LabelMyBase labelMyBase)
+        public async Task DeleteAsync(LabelMySpace labelMyBase)
         {
             await _repository.DeleteAsync(labelMyBase);
-            await _distributedCache.RemoveAsync(LabelMyBaseCacheKeys.ListKey);
-            await _distributedCache.RemoveAsync(LabelMyBaseCacheKeys.GetKey(labelMyBase.Id));
+            await _distributedCache.RemoveAsync(LabelMySpaceCacheKeys.ListKey);
+            await _distributedCache.RemoveAsync(LabelMySpaceCacheKeys.GetKey(labelMyBase.Id));
         }
 
-        public async Task<LabelMyBase> GetByIdAsync(int labelMyBaseId)
+        public async Task<LabelMySpace> GetByIdAsync(int labelMyBaseId)
         {
             //not use cache
             //return await _repository.Entities.Where(p => p.Id == CategoryId).FirstOrDefaultAsync();
 
-            var cacheKey = LabelMyBaseCacheKeys.GetKey(labelMyBaseId);
-            var labelMyBase = await _distributedCache.GetAsync<LabelMyBase>(cacheKey);
+            var cacheKey = LabelMySpaceCacheKeys.GetKey(labelMyBaseId);
+            var labelMyBase = await _distributedCache.GetAsync<LabelMySpace>(cacheKey);
             if (labelMyBase == null)
             {
                 labelMyBase = await _repository.Entities.Where(p => p.Id == labelMyBaseId).FirstOrDefaultAsync();
@@ -47,13 +47,13 @@ namespace OnionArchitecture.Infrastructure.Repositories
             return labelMyBase;
         }
 
-        public async Task<List<LabelMyBase>> GetListAsync()
+        public async Task<List<LabelMySpace>> GetListAsync()
         {
             //not use cache
             //return await _repository.Entities.ToListAsync();
 
-            var cacheKey = LabelMyBaseCacheKeys.ListKey;
-            var labelMyBaseList = await _distributedCache.GetAsync<List<LabelMyBase>>(cacheKey);
+            var cacheKey = LabelMySpaceCacheKeys.ListKey;
+            var labelMyBaseList = await _distributedCache.GetAsync<List<LabelMySpace>>(cacheKey);
             if (labelMyBaseList == null)
             {
                 labelMyBaseList = await _repository.Entities.ToListAsync();
@@ -62,18 +62,18 @@ namespace OnionArchitecture.Infrastructure.Repositories
             return labelMyBaseList;
         }
 
-        public async Task<int> InsertAsync(LabelMyBase labelMyBase)
+        public async Task<int> InsertAsync(LabelMySpace labelMyBase)
         {
             await _repository.AddAsync(labelMyBase);
-            await _distributedCache.RemoveAsync(LabelMyBaseCacheKeys.ListKey);
+            await _distributedCache.RemoveAsync(LabelMySpaceCacheKeys.ListKey);
             return labelMyBase.Id;
         }
 
-        public async Task UpdateAsync(LabelMyBase labelMyBase)
+        public async Task UpdateAsync(LabelMySpace labelMyBase)
         {
             await _repository.UpdateAsync(labelMyBase);
-            await _distributedCache.RemoveAsync(LabelMyBaseCacheKeys.ListKey);
-            await _distributedCache.RemoveAsync(LabelMyBaseCacheKeys.GetKey(labelMyBase.Id));
+            await _distributedCache.RemoveAsync(LabelMySpaceCacheKeys.ListKey);
+            await _distributedCache.RemoveAsync(LabelMySpaceCacheKeys.GetKey(labelMyBase.Id));
         }
     }
 }

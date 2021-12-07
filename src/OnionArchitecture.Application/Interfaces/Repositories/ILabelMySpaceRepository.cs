@@ -5,18 +5,18 @@ using OnionArchitecture.Domain.Entities;
 
 namespace OnionArchitecture.Application.Interfaces.Repositories
 {
-    public interface ILabelMyBaseRepository
+    public interface ILabelMySpaceRepository
     {
-        IQueryable<LabelMyBase> LabelMyBases { get; }
+        IQueryable<LabelMySpace> LabelMySpaces { get; }
 
-        Task<List<LabelMyBase>> GetListAsync();
+        Task<List<LabelMySpace>> GetListAsync();
 
-        Task<LabelMyBase> GetByIdAsync(int labelMyBaseId);
+        Task<LabelMySpace> GetByIdAsync(int labelMySpaceId);
 
-        Task<int> InsertAsync(LabelMyBase labelMyBase);
+        Task<int> InsertAsync(LabelMySpace labelMySpace);
 
-        Task UpdateAsync(LabelMyBase labelMyBase);
+        Task UpdateAsync(LabelMySpace labelMySpace);
 
-        Task DeleteAsync(LabelMyBase labelMyBase);
+        Task DeleteAsync(LabelMySpace labelMySpace);
     }
 }

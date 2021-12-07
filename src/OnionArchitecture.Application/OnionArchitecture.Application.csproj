@@ -21,10 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Functions\" />
-    <Folder Include="Features\LabelMyBases\" />
     <Folder Include="Features\Labels\" />
-    <Folder Include="Features\MyBases\" />
+    <Folder Include="Features\MySpace\" />
     <Folder Include="Features\Privileges\" />
     <Folder Include="Features\Reports\" />
     <Folder Include="Features\Votes\" />

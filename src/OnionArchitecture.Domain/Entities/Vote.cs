@@ -6,7 +6,7 @@ namespace OnionArchitecture.Domain.Entities
     [Table("Votes")]
     public class Vote : AuditableBaseEntity<int>
     {
-        public int MyBaseId { get; set; }
-        public virtual MyBase MyBase { get; set; }
+        public int MySpaceId { get; set; }
+        public virtual MySpace MySpace { get; set; }
     }
 }
