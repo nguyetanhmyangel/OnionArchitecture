@@ -11,7 +11,7 @@ namespace OnionArchitecture.Domain.Entities
         public string FileType { get; set; }
         public long FileSize { get; set; }
         public string Type { get; set; }
-        public int? MyBaseId { get; set; }
+        public int? MySpaceId { get; set; }
         public int? CommentId { get; set; }
         public virtual MySpace MySpace { get; set; }
         public virtual Comment Comment { get; set; }

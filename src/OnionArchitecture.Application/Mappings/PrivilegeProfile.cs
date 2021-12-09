@@ -1,21 +1,20 @@
-﻿//using AspNetCoreHero.Boilerplate.Application.Features.Products.Commands.Create;
-//using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllCached;
-//using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged;
-//using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetById;
-//using AspNetCoreHero.Boilerplate.Domain.Entities.Catalog;
-
-using AutoMapper;
+﻿using AutoMapper;
+using OnionArchitecture.Application.Features.Privileges.Commands.Create;
+using OnionArchitecture.Application.Features.Privileges.Queries.Get;
+using OnionArchitecture.Application.Features.Privileges.Queries.GetById;
+using OnionArchitecture.Application.Features.Privileges.Queries.GetPage;
+using OnionArchitecture.Domain.Entities;
 
 namespace OnionArchitecture.Application.Mappings
 {
-    internal class ProductProfile : Profile
+    internal class PrivilegeProfile : Profile
     {
-        public ProductProfile()
+        public PrivilegeProfile()
         {
-            //CreateMap<CreateProductCommand, Product>().ReverseMap();
-            //CreateMap<GetProductByIdResponse, Product>().ReverseMap();
-            //CreateMap<GetAllProductsCachedResponse, Product>().ReverseMap();
-            //CreateMap<GetAllProductsResponse, Product>().ReverseMap();
+            CreateMap<CreatePrivilegeCommand, Privilege>().ReverseMap();
+            CreateMap<GetPrivilegeByIdResponse, Privilege>().ReverseMap();
+            CreateMap<GetPrivilegeResponse, Privilege>().ReverseMap();
+            CreateMap<GetPagePrivilegeResponse, Privilege>().ReverseMap();
         }
     }
 }

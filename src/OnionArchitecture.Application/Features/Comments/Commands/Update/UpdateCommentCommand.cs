@@ -10,7 +10,7 @@ namespace OnionArchitecture.Application.Features.Comments.Commands.Update
     {
         public int Id { get; set; }
         public string Content { get; set; }
-        public int MyBaseId { get; set; }
+        public int MySpaceId { get; set; }
 
         public class UpdateCommentCommandHandler : IRequestHandler<UpdateCommentCommand, Result<int>>
         {
@@ -33,7 +33,7 @@ namespace OnionArchitecture.Application.Features.Comments.Commands.Update
                 }
 
                 comment.Content = command.Content ?? comment.Content;
-                comment.MySpaceId = (command.MyBaseId == 0) ? comment.MySpaceId : command.MyBaseId;
+                comment.MySpaceId = (command.MySpaceId == 0) ? comment.MySpaceId : command.MySpaceId;
                 await _commentRepository.UpdateAsync(comment);
                 await _unitOfWork.Commit(cancellationToken);
                 return await Result<int>.SuccessAsync(comment.Id);

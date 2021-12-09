@@ -1,21 +1,20 @@
-﻿//using AspNetCoreHero.Boilerplate.Application.Features.Products.Commands.Create;
-//using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllCached;
-//using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged;
-//using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetById;
-//using AspNetCoreHero.Boilerplate.Domain.Entities.Catalog;
-
-using AutoMapper;
+﻿using AutoMapper;
+using OnionArchitecture.Application.Features.Votes.Commands.Create;
+using OnionArchitecture.Application.Features.Votes.Queries.Get;
+using OnionArchitecture.Application.Features.Votes.Queries.GetById;
+using OnionArchitecture.Application.Features.Votes.Queries.GetPage;
+using OnionArchitecture.Domain.Entities;
 
 namespace OnionArchitecture.Application.Mappings
 {
-    internal class ProductProfile : Profile
+    internal class VoteProfile : Profile
     {
-        public ProductProfile()
+        public VoteProfile()
         {
-            //CreateMap<CreateProductCommand, Product>().ReverseMap();
-            //CreateMap<GetProductByIdResponse, Product>().ReverseMap();
-            //CreateMap<GetAllProductsCachedResponse, Product>().ReverseMap();
-            //CreateMap<GetAllProductsResponse, Product>().ReverseMap();
+            CreateMap<CreateVoteCommand, Vote>().ReverseMap();
+            CreateMap<GetVoteByIdResponse, Vote>().ReverseMap();
+            CreateMap<GetVoteResponse, Vote>().ReverseMap();
+            CreateMap<GetPageVoteResponse, Vote>().ReverseMap();
         }
     }
 }

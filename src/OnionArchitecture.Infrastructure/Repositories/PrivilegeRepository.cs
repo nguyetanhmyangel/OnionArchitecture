@@ -42,7 +42,7 @@ namespace OnionArchitecture.Infrastructure.Repositories
             if (labelMyBase == null)
             {
                 labelMyBase = await _repository.Entities.Where(p => p.Id == privilegeId).FirstOrDefaultAsync();
-                Throw.Exception.IfNull(labelMyBase, "Comment", "No Comment Found");
+                Throw.Exception.IfNull(labelMyBase, "Privilege", "No Privilege Found");
                 await _distributedCache.SetAsync(cacheKey, labelMyBase);
             }
             return labelMyBase;

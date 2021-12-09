@@ -3,7 +3,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OnionArchitecture.Application.Interfaces.Contexts;
+using OnionArchitecture.Application.Interfaces.Repositories;
 using OnionArchitecture.Infrastructure.Contexts;
+using OnionArchitecture.Infrastructure.Repositories;
 
 namespace OnionArchitecture.Infrastructure.Extensions
 {
@@ -19,13 +21,24 @@ namespace OnionArchitecture.Infrastructure.Extensions
         {
             #region Repositories
 
-            //services.AddTransient(typeof(IRepositoryAsync<>), typeof(RepositoryAsync<>));
-            //services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient(typeof(IRepositoryAsync<>), typeof(RepositoryAsync<>));
+            services.AddTransient<ILogRepository, LogRepository>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IAttachmentRepository, AttachmentRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ICommentRepository, CommentRepository>();
+            services.AddTransient<IEnjoinFunctionRepository, EnjoinFunctionRepository>();
+            services.AddTransient<IEnjoinRepository, EnjoinRepository>();
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
+            services.AddTransient<ILabelMySpaceRepository, LabelMySpaceRepository>();
+            services.AddTransient<ILabelRepository, LabelRepository>();
+            services.AddTransient<IMySpaceRepository, MySpaceRepository>();
+            services.AddTransient<IPrivilegeRepository, PrivilegeRepository>();
+            services.AddTransient<IReportRepository, ReportRepository>();
+            services.AddTransient<IVoteRepository, VoteRepository>();
+
             //services.AddTransient<IProductCacheRepository, ProductCacheRepository>();
-            //services.AddTransient<IBrandRepository, BrandRepository>();
             //services.AddTransient<IBrandCacheRepository, BrandCacheRepository>();
-            //services.AddTransient<ILogRepository, LogRepository>();
-            //services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             #endregion Repositories
         }

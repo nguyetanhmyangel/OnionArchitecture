@@ -1,0 +1,17 @@
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\bin\Debug\net5.0\OnionArchitecture.Application.deps.json
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\bin\Debug\net5.0\OnionArchitecture.Application.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\bin\Debug\net5.0\ref\OnionArchitecture.Application.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\bin\Debug\net5.0\OnionArchitecture.Application.pdb
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\bin\Debug\net5.0\OnionArchitecture.Domain.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\bin\Debug\net5.0\OnionArchitecture.Infrastructure.Share.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\bin\Debug\net5.0\OnionArchitecture.Domain.pdb
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\bin\Debug\net5.0\OnionArchitecture.Infrastructure.Share.pdb
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\obj\Debug\net5.0\OnionArchitecture.Application.csproj.AssemblyReference.cache
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\obj\Debug\net5.0\OnionArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\obj\Debug\net5.0\OnionArchitecture.Application.AssemblyInfoInputs.cache
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\obj\Debug\net5.0\OnionArchitecture.Application.AssemblyInfo.cs
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\obj\Debug\net5.0\OnionArchitecture.Application.csproj.CoreCompileInputs.cache
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\obj\Debug\net5.0\OnionArchitecture.Application.csproj.CopyComplete
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\obj\Debug\net5.0\OnionArchitecture.Application.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\obj\Debug\net5.0\ref\OnionArchitecture.Application.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Application\obj\Debug\net5.0\OnionArchitecture.Application.pdb

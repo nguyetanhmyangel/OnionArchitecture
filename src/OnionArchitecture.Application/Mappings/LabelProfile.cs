@@ -1,21 +1,20 @@
-﻿//using AspNetCoreHero.Boilerplate.Application.Features.Products.Commands.Create;
-//using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllCached;
-//using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged;
-//using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetById;
-//using AspNetCoreHero.Boilerplate.Domain.Entities.Catalog;
-
-using AutoMapper;
+﻿using AutoMapper;
+using OnionArchitecture.Application.Features.Labels.Commands.Create;
+using OnionArchitecture.Application.Features.Labels.Queries.Get;
+using OnionArchitecture.Application.Features.Labels.Queries.GetById;
+using OnionArchitecture.Application.Features.Labels.Queries.GetPage;
+using OnionArchitecture.Domain.Entities;
 
 namespace OnionArchitecture.Application.Mappings
 {
-    internal class ProductProfile : Profile
+    internal class LabelProfile : Profile
     {
-        public ProductProfile()
+        public LabelProfile()
         {
-            //CreateMap<CreateProductCommand, Product>().ReverseMap();
-            //CreateMap<GetProductByIdResponse, Product>().ReverseMap();
-            //CreateMap<GetAllProductsCachedResponse, Product>().ReverseMap();
-            //CreateMap<GetAllProductsResponse, Product>().ReverseMap();
+            CreateMap<CreateLabelCommand, Label>().ReverseMap();
+            CreateMap<GetLabelByIdResponse, Label>().ReverseMap();
+            CreateMap<GetLabelResponse, Label>().ReverseMap();
+            CreateMap<GetPageLabelResponse, Label>().ReverseMap();
         }
     }
 }

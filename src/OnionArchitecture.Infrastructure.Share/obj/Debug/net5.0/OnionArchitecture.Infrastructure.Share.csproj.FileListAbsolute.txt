@@ -1,0 +1,12 @@
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\bin\Debug\net5.0\OnionArchitecture.Infrastructure.Share.deps.json
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\bin\Debug\net5.0\OnionArchitecture.Infrastructure.Share.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\bin\Debug\net5.0\ref\OnionArchitecture.Infrastructure.Share.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\bin\Debug\net5.0\OnionArchitecture.Infrastructure.Share.pdb
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\obj\Debug\net5.0\OnionArchitecture.Infrastructure.Share.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\obj\Debug\net5.0\OnionArchitecture.Infrastructure.Share.AssemblyInfoInputs.cache
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\obj\Debug\net5.0\OnionArchitecture.Infrastructure.Share.AssemblyInfo.cs
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\obj\Debug\net5.0\OnionArchitecture.Infrastructure.Share.csproj.CoreCompileInputs.cache
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\obj\Debug\net5.0\OnionArchitecture.Infrastructure.Share.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\obj\Debug\net5.0\ref\OnionArchitecture.Infrastructure.Share.dll
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\obj\Debug\net5.0\OnionArchitecture.Infrastructure.Share.pdb
+D:\Project\Core 5\OnionArchitecture\src\OnionArchitecture.Infrastructure.Share\obj\Debug\net5.0\OnionArchitecture.Infrastructure.Share.csproj.AssemblyReference.cache

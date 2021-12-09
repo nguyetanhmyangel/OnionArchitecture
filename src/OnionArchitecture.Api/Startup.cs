@@ -1,18 +1,10 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.Authorization;
 using OnionArchitecture.Api.Extensions;
 using OnionArchitecture.Application.Extensions;
 using OnionArchitecture.Infrastructure.Extensions;
@@ -20,13 +12,14 @@ using OnionArchitecture.Infrastructure.Extensions;
 namespace OnionArchitecture.Api
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class Startup
     {
         public IConfiguration _configuration { get; }
+
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
@@ -36,7 +29,7 @@ namespace OnionArchitecture.Api
 
         // This method gets called by the runtime. Use this method to add services to the container.
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
@@ -59,7 +52,7 @@ namespace OnionArchitecture.Api
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="app"></param>
         /// <param name="env"></param>

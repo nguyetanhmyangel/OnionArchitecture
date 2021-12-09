@@ -41,7 +41,7 @@ namespace OnionArchitecture.Infrastructure.Repositories
             if (vote == null)
             {
                 vote = await _repository.Entities.Where(p => p.Id == voteId).FirstOrDefaultAsync();
-                Throw.Exception.IfNull(vote, "Comment", "No Comment Found");
+                Throw.Exception.IfNull(vote, "Vote", "No Vote Found");
                 await _distributedCache.SetAsync(cacheKey, vote);
             }
             return vote;

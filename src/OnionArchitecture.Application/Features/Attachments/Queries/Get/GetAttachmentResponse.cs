@@ -1,6 +1,4 @@
-﻿using OnionArchitecture.Domain.Entities;
-
-namespace OnionArchitecture.Application.Features.Attachments.Queries.Get
+﻿namespace OnionArchitecture.Application.Features.Attachments.Queries.Get
 {
     public class GetAttachmentResponse
     {
@@ -10,7 +8,7 @@ namespace OnionArchitecture.Application.Features.Attachments.Queries.Get
         public string FileType { get; set; }
         public long FileSize { get; set; }
         public string Type { get; set; }
-        public int? MyBaseId { get; set; }
+        public int? MySpaceId { get; set; }
         public int? CommentId { get; set; }
     }
 }

@@ -15,12 +15,12 @@ namespace OnionArchitecture.Application.Features.Attachments.Queries.Get
         }
     }
 
-    public class GetAllAttachmentQueryHandler : IRequestHandler<GetAttachmentQuery, Result<List<GetAttachmentResponse>>>
+    public class GetAttachmentQueryHandler : IRequestHandler<GetAttachmentQuery, Result<List<GetAttachmentResponse>>>
     {
         private readonly IAttachmentRepository _attachmentRepository;
         private readonly IMapper _mapper;
 
-        public GetAllAttachmentQueryHandler(IAttachmentRepository attachmentRepository, IMapper mapper)
+        public GetAttachmentQueryHandler(IAttachmentRepository attachmentRepository, IMapper mapper)
         {
             _attachmentRepository = attachmentRepository;
             _mapper = mapper;

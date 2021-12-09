@@ -23,11 +23,11 @@ namespace OnionArchitecture.Application.Features.EnjoinFunctions.Queries.GetPage
         }
     }
 
-    public class GetEnjoinFunctionQueryHandler : IRequestHandler<GetPageEnjoinFunctionQuery, PaginatedResult<GetPageEnjoinFunctionResponse>>
+    public class GetPageEnjoinFunctionQueryHandler : IRequestHandler<GetPageEnjoinFunctionQuery, PaginatedResult<GetPageEnjoinFunctionResponse>>
     {
         private readonly IEnjoinFunctionRepository _repository;
 
-        public GetEnjoinFunctionQueryHandler(IEnjoinFunctionRepository repository)
+        public GetPageEnjoinFunctionQueryHandler(IEnjoinFunctionRepository repository)
         {
             _repository = repository;
         }

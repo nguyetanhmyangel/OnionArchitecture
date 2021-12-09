@@ -41,7 +41,7 @@ namespace OnionArchitecture.Infrastructure.Repositories
             if (label == null)
             {
                 label = await _repository.Entities.Where(p => p.Id == labelId).FirstOrDefaultAsync();
-                Throw.Exception.IfNull(label, "Comment", "No Comment Found");
+                Throw.Exception.IfNull(label, "Label", "No Label Found");
                 await _distributedCache.SetAsync(cacheKey, label);
             }
             return label;

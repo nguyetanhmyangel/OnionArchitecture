@@ -41,7 +41,7 @@ namespace OnionArchitecture.Infrastructure.Repositories
             if (report == null)
             {
                 report = await _repository.Entities.Where(p => p.Id == reportId).FirstOrDefaultAsync();
-                Throw.Exception.IfNull(report, "Comment", "No Comment Found");
+                Throw.Exception.IfNull(report, "Report", "No Report Found");
                 await _distributedCache.SetAsync(cacheKey, report);
             }
             return report;

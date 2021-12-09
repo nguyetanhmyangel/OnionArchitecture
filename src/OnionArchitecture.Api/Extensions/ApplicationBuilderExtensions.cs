@@ -16,7 +16,7 @@ namespace OnionArchitecture.Api.Extensions
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCoreHero.Boilerplate.Api");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "OnionArchitecture.Boilerplate.Api");
                 options.RoutePrefix = "swagger";
                 options.DisplayRequestDuration();
             });

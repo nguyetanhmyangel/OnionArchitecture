@@ -15,12 +15,12 @@ namespace OnionArchitecture.Application.Features.Comments.Queries.Get
         }
     }
 
-    public class GetCommentCachedQueryHandler : IRequestHandler<GetCommentQuery, Result<List<GetCommentResponse>>>
+    public class GetCommentQueryHandler : IRequestHandler<GetCommentQuery, Result<List<GetCommentResponse>>>
     {
         private readonly ICommentRepository _commentRepository;
         private readonly IMapper _mapper;
 
-        public GetCommentCachedQueryHandler(ICommentRepository commentRepository, IMapper mapper)
+        public GetCommentQueryHandler(ICommentRepository commentRepository, IMapper mapper)
         {
             _commentRepository = commentRepository;
             _mapper = mapper;
@@ -29,8 +29,8 @@ namespace OnionArchitecture.Application.Features.Comments.Queries.Get
         public async Task<Result<List<GetCommentResponse>>> Handle(GetCommentQuery request, CancellationToken cancellationToken)
         {
             var commentList = await _commentRepository.GetListAsync();
-            var mappedProducts = _mapper.Map<List<GetCommentResponse>>(commentList);
-            return await Result<List<GetCommentResponse>>.SuccessAsync(mappedProducts);
+            var mappedComments = _mapper.Map<List<GetCommentResponse>>(commentList);
+            return await Result<List<GetCommentResponse>>.SuccessAsync(mappedComments);
         }
     }
 }

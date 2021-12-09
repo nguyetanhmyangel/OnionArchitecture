@@ -41,7 +41,7 @@ namespace OnionArchitecture.Infrastructure.Repositories
             if (enjoin == null)
             {
                 enjoin = await _repository.Entities.Where(p => p.Id == enjoinId).FirstOrDefaultAsync();
-                Throw.Exception.IfNull(enjoin, "Command", "No Command Found");
+                Throw.Exception.IfNull(enjoin, "Enjoin", "No Enjoin Found");
                 await _distributedCache.SetAsync(cacheKey, enjoin);
             }
             return enjoin;
