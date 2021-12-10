@@ -15,7 +15,7 @@ namespace OnionArchitecture.Application.Features.Functions.Commands.Update
 
         public int SortOrder { get; set; }
 
-        public string ParentId { get; set; }
+        public int ParentId { get; set; }
 
         public string Icon { get; set; }
 
@@ -42,7 +42,7 @@ namespace OnionArchitecture.Application.Features.Functions.Commands.Update
                 function.Name = command.Name ?? function.Name;
                 function.Url = command.Url ?? function.Url;
                 function.Icon = command.Icon ?? function.Icon;
-                function.ParentId = command.ParentId ?? function.ParentId;
+                function.ParentId = (command.ParentId == 0) ? function.ParentId : command.ParentId;
                 function.SortOrder = (command.SortOrder == 0) ? function.SortOrder : command.SortOrder;
                 await _functionRepository.UpdateAsync(function);
                 await _unitOfWork.Commit(cancellationToken);

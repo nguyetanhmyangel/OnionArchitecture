@@ -40,7 +40,6 @@ namespace OnionArchitecture.Application.Features.Attachments.Queries.GetPage
                 FileName = e.FileName,
                 FilePath = e.FilePath,
                 FileType = e.FileType,
-                Type = e.Type,
                 FileSize = e.FileSize,
                 MySpaceId = e.MySpaceId,
                 CommentId = e.CommentId

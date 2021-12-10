@@ -8,7 +8,7 @@
 
         public int SortOrder { get; set; }
 
-        public string ParentId { get; set; }
+        public int ParentId { get; set; }
 
         public string Icon { get; set; }
     }

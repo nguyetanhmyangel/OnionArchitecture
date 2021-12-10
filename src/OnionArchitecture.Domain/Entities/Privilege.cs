@@ -14,9 +14,13 @@ namespace OnionArchitecture.Domain.Entities
         //}
 
         public int FunctionId { get; set; }
+
         public int RoleId { get; set; }
+
         public int EnjoinId { get; set; }
+
         public virtual Function Function { get; set; }
+
         public virtual Enjoin Enjoin { get; set; }
     }
 }

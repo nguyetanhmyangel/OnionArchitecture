@@ -4,6 +4,100 @@
         <name>OnionArchitecture.Api</name>
     </assembly>
     <members>
+        <member name="T:OnionArchitecture.Api.Controllers.BaseApiController`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:OnionArchitecture.Api.Controllers.IdentityController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.IdentityController.#ctor(OnionArchitecture.Application.Interfaces.Services.IIdentityService)">
+            <summary>
+            
+            </summary>
+            <param name="identityService"></param>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.IdentityController.GetTokenAsync(OnionArchitecture.Application.DTOs.Identity.TokenRequest)">
+            <summary>
+            Generates a JSON Web Token for a valid combination of emailId and password.
+            </summary>
+            <param name="tokenRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.IdentityController.RegisterAsync(OnionArchitecture.Application.DTOs.Identity.RegisterRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.IdentityController.ConfirmEmailAsync(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.IdentityController.ForgotPassword(OnionArchitecture.Application.DTOs.Identity.ForgotPasswordRequest)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.IdentityController.ResetPassword(OnionArchitecture.Application.DTOs.Identity.ResetPasswordRequest)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OnionArchitecture.Api.Controllers.v1.AttachmentController">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.v1.AttachmentController.GetAll">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.v1.AttachmentController.GetById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.v1.AttachmentController.Post(OnionArchitecture.Application.Features.Attachments.Commands.Create.CreateAttachmentCommand)">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.v1.AttachmentController.Put(System.Int32,OnionArchitecture.Application.Features.Attachments.Commands.Update.UpdateAttachmentCommand)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OnionArchitecture.Api.Controllers.v1.AttachmentController.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:OnionArchitecture.Api.Extensions.ApplicationBuilderExtensions">
             <summary>
             

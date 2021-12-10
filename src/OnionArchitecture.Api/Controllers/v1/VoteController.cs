@@ -1,34 +1,39 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using OnionArchitecture.Application.Features.Votes.Commands.Create;
+using OnionArchitecture.Application.Features.Votes.Commands.Delete;
+using OnionArchitecture.Application.Features.Votes.Commands.Update;
+using OnionArchitecture.Application.Features.Votes.Queries.Get;
+using OnionArchitecture.Application.Features.Votes.Queries.GetById;
 
 namespace OnionArchitecture.Api.Controllers.v1
 {
-    public class BrandController : BaseApiController<BrandController>
+    public class VoteController : BaseApiController<VoteController>
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var brands = await _mediator.Send(new GetAllBrandsCachedQuery());
-            return Ok(brands);
+            var votes = await _mediator.Send(new GetVoteQuery());
+            return Ok(votes);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var brand = await _mediator.Send(new GetBrandByIdQuery() { Id = id });
-            return Ok(brand);
+            var vote = await _mediator.Send(new GetVoteByIdQuery() { Id = id });
+            return Ok(vote);
         }
 
         // POST api/<controller>
         [HttpPost]
-        public async Task<IActionResult> Post(CreateBrandCommand command)
+        public async Task<IActionResult> Post(CreateVoteCommand command)
         {
             return Ok(await _mediator.Send(command));
         }
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, UpdateBrandCommand command)
+        public async Task<IActionResult> Put(int id, UpdateVoteCommand command)
         {
             if (id != command.Id)
             {
@@ -41,7 +46,7 @@ namespace OnionArchitecture.Api.Controllers.v1
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _mediator.Send(new DeleteBrandCommand { Id = id }));
+            return Ok(await _mediator.Send(new DeleteVoteCommand { Id = id }));
         }
     }
 }

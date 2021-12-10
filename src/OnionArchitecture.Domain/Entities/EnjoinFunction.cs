@@ -7,8 +7,11 @@ namespace OnionArchitecture.Domain.Entities
     public class EnjoinFunction : AuditableBaseEntity<int>
     {
         public int EnjoinId { get; set; }
+
         public int FunctionId { get; set; }
+
         public virtual Enjoin Enjoin { get; set; }
+
         public virtual Function Function { get; set; }
     }
 }

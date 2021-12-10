@@ -7,11 +7,11 @@ using OnionArchitecture.Infrastructure.Share.Results;
 
 namespace OnionArchitecture.Application.Features.LabelMySpaces.Queries.GetById
 {
-    public class GetLabelMySpaceyIdQuery : IRequest<Result<GetLabelMySpaceByIdResponse>>
+    public class GetLabelMySpaceByIdQuery : IRequest<Result<GetLabelMySpaceByIdResponse>>
     {
         public int Id { get; set; }
 
-        public class GetLabelMySpaceByIdQueryHandler : IRequestHandler<GetLabelMySpaceyIdQuery, Result<GetLabelMySpaceByIdResponse>>
+        public class GetLabelMySpaceByIdQueryHandler : IRequestHandler<GetLabelMySpaceByIdQuery, Result<GetLabelMySpaceByIdResponse>>
         {
             private readonly ILabelMySpaceRepository _productCache;
             private readonly IMapper _mapper;
@@ -22,7 +22,7 @@ namespace OnionArchitecture.Application.Features.LabelMySpaces.Queries.GetById
                 _mapper = mapper;
             }
 
-            public async Task<Result<GetLabelMySpaceByIdResponse>> Handle(GetLabelMySpaceyIdQuery query, CancellationToken cancellationToken)
+            public async Task<Result<GetLabelMySpaceByIdResponse>> Handle(GetLabelMySpaceByIdQuery query, CancellationToken cancellationToken)
             {
                 var labelMySpace = await _productCache.GetByIdAsync(query.Id);
                 var mappedLabelMySpaces = _mapper.Map<GetLabelMySpaceByIdResponse>(labelMySpace);

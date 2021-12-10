@@ -1,34 +1,39 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using OnionArchitecture.Application.Features.Enjoins.Commands.Create;
+using OnionArchitecture.Application.Features.Enjoins.Commands.Delete;
+using OnionArchitecture.Application.Features.Enjoins.Commands.Update;
+using OnionArchitecture.Application.Features.Enjoins.Queries.Get;
+using OnionArchitecture.Application.Features.Enjoins.Queries.GetById;
 
 namespace OnionArchitecture.Api.Controllers.v1
 {
-    public class BrandController : BaseApiController<BrandController>
+    public class EnjoinController : BaseApiController<EnjoinController>
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var brands = await _mediator.Send(new GetAllBrandsCachedQuery());
-            return Ok(brands);
+            var enjoins = await _mediator.Send(new GetEnjoinQuery());
+            return Ok(enjoins);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var brand = await _mediator.Send(new GetBrandByIdQuery() { Id = id });
-            return Ok(brand);
+            var enjoin = await _mediator.Send(new GetEnjoinByIdQuery() { Id = id });
+            return Ok(enjoin);
         }
 
         // POST api/<controller>
         [HttpPost]
-        public async Task<IActionResult> Post(CreateBrandCommand command)
+        public async Task<IActionResult> Post(CreateEnjoinCommand command)
         {
             return Ok(await _mediator.Send(command));
         }
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, UpdateBrandCommand command)
+        public async Task<IActionResult> Put(int id, UpdateEnjoinCommand command)
         {
             if (id != command.Id)
             {
@@ -41,7 +46,7 @@ namespace OnionArchitecture.Api.Controllers.v1
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _mediator.Send(new DeleteBrandCommand { Id = id }));
+            return Ok(await _mediator.Send(new DeleteEnjoinCommand { Id = id }));
         }
     }
 }

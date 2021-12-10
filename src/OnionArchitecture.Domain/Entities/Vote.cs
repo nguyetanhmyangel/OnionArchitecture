@@ -7,6 +7,7 @@ namespace OnionArchitecture.Domain.Entities
     public class Vote : AuditableBaseEntity<int>
     {
         public int MySpaceId { get; set; }
+
         public virtual MySpace MySpace { get; set; }
     }
 }

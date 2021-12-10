@@ -13,6 +13,7 @@ namespace OnionArchitecture.Application.Constants
                 $"Permissions.{module}.View",
                 $"Permissions.{module}.Edit",
                 $"Permissions.{module}.Delete",
+                $"Permissions.{module}.Approved",
             };
         }
 
@@ -22,6 +23,7 @@ namespace OnionArchitecture.Application.Constants
             public const string Create = "Permissions.Dashboard.Create";
             public const string Edit = "Permissions.Dashboard.Edit";
             public const string Delete = "Permissions.Dashboard.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
         public static class Attachments
@@ -30,6 +32,7 @@ namespace OnionArchitecture.Application.Constants
             public const string Create = "Permissions.Attachments.Create";
             public const string Edit = "Permissions.Attachments.Edit";
             public const string Delete = "Permissions.Attachments.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
         public static class Categories
@@ -38,6 +41,7 @@ namespace OnionArchitecture.Application.Constants
             public const string Create = "Permissions.Categories.Create";
             public const string Edit = "Permissions.Categories.Edit";
             public const string Delete = "Permissions.Categories.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
         public static class Commands
@@ -62,6 +66,7 @@ namespace OnionArchitecture.Application.Constants
             public const string Create = "Permissions.Comments.Create";
             public const string Edit = "Permissions.Comments.Edit";
             public const string Delete = "Permissions.Comments.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
         public static class Functions
@@ -70,14 +75,16 @@ namespace OnionArchitecture.Application.Constants
             public const string Create = "Permissions.Functions.Create";
             public const string Edit = "Permissions.Functions.Edit";
             public const string Delete = "Permissions.Functions.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
-        public static class MyBases
+        public static class MySpaces
         {
             public const string View = "Permissions.MyBases.View";
             public const string Create = "Permissions.MyBases.Create";
             public const string Edit = "Permissions.MyBases.Edit";
             public const string Delete = "Permissions.MyBases.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
         public static class Labels
@@ -86,14 +93,16 @@ namespace OnionArchitecture.Application.Constants
             public const string Create = "Permissions.Labels.Create";
             public const string Edit = "Permissions.Labels.Edit";
             public const string Delete = "Permissions.Labels.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
-        public static class LabelMyBases
+        public static class LabelMySpaces
         {
             public const string View = "Permissions.LabelMyBases.View";
             public const string Create = "Permissions.LabelMyBases.Create";
             public const string Edit = "Permissions.LabelMyBases.Edit";
             public const string Delete = "Permissions.LabelMyBases.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
         public static class Privileges
@@ -102,6 +111,7 @@ namespace OnionArchitecture.Application.Constants
             public const string Create = "Permissions.Privileges.Create";
             public const string Edit = "Permissions.Privileges.Edit";
             public const string Delete = "Permissions.Privileges.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
         public static class Reports
@@ -110,6 +120,7 @@ namespace OnionArchitecture.Application.Constants
             public const string Create = "Permissions.Reports.Create";
             public const string Edit = "Permissions.Reports.Edit";
             public const string Delete = "Permissions.Reports.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
 
         public static class Votes
@@ -118,6 +129,7 @@ namespace OnionArchitecture.Application.Constants
             public const string Create = "Permissions.Votes.Create";
             public const string Edit = "Permissions.Votes.Edit";
             public const string Delete = "Permissions.Votes.Delete";
+            public const string Approved = "Permissions.Dashboard.Approved";
         }
     }
 }
