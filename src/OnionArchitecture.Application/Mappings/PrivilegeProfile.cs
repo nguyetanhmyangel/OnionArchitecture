@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using OnionArchitecture.Application.Features.Permissions.Queries.GetPage;
 using OnionArchitecture.Application.Features.Privileges.Commands.Create;
 using OnionArchitecture.Application.Features.Privileges.Queries.Get;
 using OnionArchitecture.Application.Features.Privileges.Queries.GetById;
@@ -11,10 +12,10 @@ namespace OnionArchitecture.Application.Mappings
     {
         public PrivilegeProfile()
         {
-            CreateMap<CreatePrivilegeCommand, Privilege>().ReverseMap();
-            CreateMap<GetPrivilegeByIdResponse, Privilege>().ReverseMap();
-            CreateMap<GetPrivilegeResponse, Privilege>().ReverseMap();
-            CreateMap<GetPagePrivilegeResponse, Privilege>().ReverseMap();
+            CreateMap<CreatePermissionCommand, AppPermission>().ReverseMap();
+            CreateMap<GetPermissionByIdResponse, AppPermission>().ReverseMap();
+            CreateMap<GetPermissionResponse, AppPermission>().ReverseMap();
+            CreateMap<GetPagePermissionResponse, AppPermission>().ReverseMap();
         }
     }
 }

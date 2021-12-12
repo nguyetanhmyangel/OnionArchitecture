@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Features\LabelMyBases\**" />
+    <Compile Remove="Features\MyBases\**" />
+    <EmbeddedResource Remove="Features\LabelMyBases\**" />
+    <EmbeddedResource Remove="Features\MyBases\**" />
+    <None Remove="Features\LabelMyBases\**" />
+    <None Remove="Features\MyBases\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="FluentValidation" Version="10.3.5" />
@@ -18,11 +27,6 @@
   <ItemGroup>
     <ProjectReference Include="..\OnionArchitecture.Domain\OnionArchitecture.Domain.csproj" />
     <ProjectReference Include="..\OnionArchitecture.Infrastructure.Share\OnionArchitecture.Infrastructure.Share.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Features\LabelMyBases\" />
-    <Folder Include="Features\MyBases\" />
   </ItemGroup>
 
 </Project>

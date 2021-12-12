@@ -10,12 +10,12 @@
         "projectUniqueName": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Application\\OnionArchitecture.Application.csproj",
         "projectName": "OnionArchitecture.Application",
         "projectPath": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Application\\OnionArchitecture.Application.csproj",
-        "packagesPath": "C:\\Users\\nghianl.ts\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MoonLight\\.nuget\\packages\\",
         "outputPath": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Project\\Core 5\\NuGet.Config",
-          "C:\\Users\\nghianl.ts\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MoonLight\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,8 +23,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/blazorise/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -107,12 +106,12 @@
         "projectUniqueName": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Domain\\OnionArchitecture.Domain.csproj",
         "projectName": "OnionArchitecture.Domain",
         "projectPath": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Domain\\OnionArchitecture.Domain.csproj",
-        "packagesPath": "C:\\Users\\nghianl.ts\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MoonLight\\.nuget\\packages\\",
         "outputPath": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Project\\Core 5\\NuGet.Config",
-          "C:\\Users\\nghianl.ts\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MoonLight\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -120,8 +119,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/blazorise/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -163,12 +161,12 @@
         "projectUniqueName": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Infrastructure.Share\\OnionArchitecture.Infrastructure.Share.csproj",
         "projectName": "OnionArchitecture.Infrastructure.Share",
         "projectPath": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Infrastructure.Share\\OnionArchitecture.Infrastructure.Share.csproj",
-        "packagesPath": "C:\\Users\\nghianl.ts\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MoonLight\\.nuget\\packages\\",
         "outputPath": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Infrastructure.Share\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Project\\Core 5\\NuGet.Config",
-          "C:\\Users\\nghianl.ts\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MoonLight\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -176,8 +174,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/blazorise/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -253,12 +250,12 @@
         "projectUniqueName": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Infrastructure\\OnionArchitecture.Infrastructure.csproj",
         "projectName": "OnionArchitecture.Infrastructure",
         "projectPath": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Infrastructure\\OnionArchitecture.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\nghianl.ts\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MoonLight\\.nuget\\packages\\",
         "outputPath": "D:\\Project\\Core 5\\OnionArchitecture\\src\\OnionArchitecture.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Project\\Core 5\\NuGet.Config",
-          "C:\\Users\\nghianl.ts\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MoonLight\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -266,8 +263,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/blazorise/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {

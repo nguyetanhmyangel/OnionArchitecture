@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using OnionArchitecture.Application.Features.Enjoins.Commands.Create;
-using OnionArchitecture.Application.Features.Enjoins.Queries.Get;
+using OnionArchitecture.Application.Features.AppCommands.Commands.Create;
+using OnionArchitecture.Application.Features.AppCommands.Queries.Get;
+using OnionArchitecture.Application.Features.AppCommands.Queries.GetPage;
 using OnionArchitecture.Application.Features.Enjoins.Queries.GetById;
-using OnionArchitecture.Application.Features.Enjoins.Queries.GetPage;
 using OnionArchitecture.Domain.Entities;
 
 namespace OnionArchitecture.Application.Mappings
@@ -11,10 +11,10 @@ namespace OnionArchitecture.Application.Mappings
     {
         public EnjoinProfile()
         {
-            CreateMap<CreateEnjoinCommand, Enjoin>().ReverseMap();
-            CreateMap<GetEnjoinByIdResponse, Enjoin>().ReverseMap();
-            CreateMap<GetEnjoinResponse, Enjoin>().ReverseMap();
-            CreateMap<GetPageEnjoinResponse, Enjoin>().ReverseMap();
+            CreateMap<CreateAppCommand, AppCommand>().ReverseMap();
+            CreateMap<GetAppCommandByIdResponse, AppCommand>().ReverseMap();
+            CreateMap<GetAppCommandResponse, AppCommand>().ReverseMap();
+            CreateMap<GetPageAppCommandResponse, AppCommand>().ReverseMap();
         }
     }
 }

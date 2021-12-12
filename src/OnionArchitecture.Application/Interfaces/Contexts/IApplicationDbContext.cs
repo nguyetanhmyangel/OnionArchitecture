@@ -18,14 +18,14 @@ namespace OnionArchitecture.Application.Interfaces.Contexts
 
         DbSet<Attachment> Attachments { get; set; }
         DbSet<Category> Categories { get; set; }
-        DbSet<Enjoin> Enjoins { get; set; }
-        DbSet<EnjoinFunction> EnjoinFunctions { get; set; }
+        DbSet<AppCommand> AppCommands { get; set; }
+        DbSet<AppCommandFunction> AppCommandFunctions { get; set; }
         DbSet<Comment> Comments { get; set; }
         DbSet<Function> Functions { get; set; }
         DbSet<MySpace> KnowledgeBases { get; set; }
         DbSet<Label> Labels { get; set; }
         DbSet<LabelMySpace> LabelKnowledgeBases { get; set; }
-        DbSet<Privilege> Privileges { get; set; }
+        DbSet<AppPermission> Privileges { get; set; }
         DbSet<Report> Reports { get; set; }
         DbSet<Vote> Votes { get; set; }
     }
