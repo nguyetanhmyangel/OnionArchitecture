@@ -27,10 +27,10 @@ namespace OnionArchitecture.Infrastructure.Contexts
         public DbSet<AppCommandFunction> AppCommandFunctions { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Function> Functions { get; set; }
-        public DbSet<MySpace> KnowledgeBases { get; set; }
+        public DbSet<KnowledgeBase> KnowledgeBases { get; set; }
         public DbSet<Label> Labels { get; set; }
-        public DbSet<LabelMySpace> LabelKnowledgeBases { get; set; }
-        public DbSet<AppPermission> Privileges { get; set; }
+        public DbSet<LabelKnowledgeBase> LabelKnowledgeBases { get; set; }
+        public DbSet<AppPermission> AppPermissions { get; set; }
         public DbSet<Report> Reports { get; set; }
         public DbSet<Vote> Votes { get; set; }
 

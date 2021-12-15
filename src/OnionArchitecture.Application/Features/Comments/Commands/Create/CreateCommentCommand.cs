@@ -11,7 +11,7 @@ namespace OnionArchitecture.Application.Features.Comments.Commands.Create
     public partial class CreateCommentCommand : IRequest<Result<int>>
     {
         public string Content { get; set; }
-        public int MySpaceId { get; set; }
+        public int KnowledgeBaseId { get; set; }
     }
 
     public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand, Result<int>>

@@ -17,20 +17,20 @@ namespace OnionArchitecture.Application.Features.AppCommands.Queries.Get
 
     public class GetEnjoinQueryHandler : IRequestHandler<GetAppCommandQuery, Result<List<GetAppCommandResponse>>>
     {
-        private readonly IAppCommandRepository _enjoinRepository;
+        private readonly IAppCommandRepository _appCommandRepository;
         private readonly IMapper _mapper;
 
-        public GetEnjoinQueryHandler(IAppCommandRepository enjoinRepository, IMapper mapper)
+        public GetEnjoinQueryHandler(IAppCommandRepository appCommandRepository, IMapper mapper)
         {
-            _enjoinRepository = enjoinRepository;
+            _appCommandRepository = appCommandRepository;
             _mapper = mapper;
         }
 
         public async Task<Result<List<GetAppCommandResponse>>> Handle(GetAppCommandQuery request, CancellationToken cancellationToken)
         {
-            var appCommandList = await _enjoinRepository.GetListAsync();
-            var mappedEnjoins = _mapper.Map<List<GetAppCommandResponse>>(appCommandList);
-            return await Result<List<GetAppCommandResponse>>.SuccessAsync(mappedEnjoins);
+            var appCommandList = await _appCommandRepository.GetListAsync();
+            var mappedAppCommands = _mapper.Map<List<GetAppCommandResponse>>(appCommandList);
+            return await Result<List<GetAppCommandResponse>>.SuccessAsync(mappedAppCommands);
         }
     }
 }

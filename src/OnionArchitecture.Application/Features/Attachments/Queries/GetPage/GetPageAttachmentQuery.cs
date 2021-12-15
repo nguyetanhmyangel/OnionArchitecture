@@ -41,7 +41,7 @@ namespace OnionArchitecture.Application.Features.Attachments.Queries.GetPage
                 FilePath = e.FilePath,
                 FileType = e.FileType,
                 FileSize = e.FileSize,
-                MySpaceId = e.MySpaceId,
+                KnowledgeBaseId = e.KnowledgeBaseId,
                 CommentId = e.CommentId
             };
             var paginatedList = await _repository.Attachments

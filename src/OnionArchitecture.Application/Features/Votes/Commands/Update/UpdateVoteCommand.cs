@@ -9,7 +9,7 @@ namespace OnionArchitecture.Application.Features.Votes.Commands.Update
     public class UpdateVoteCommand : IRequest<Result<int>>
     {
         public int Id { get; set; }
-        public int MySpaceId { get; set; }
+        public int KnowledgeBaseId { get; set; }
 
         public class UpdateVoteCommandHandler : IRequestHandler<UpdateVoteCommand, Result<int>>
         {
@@ -31,7 +31,7 @@ namespace OnionArchitecture.Application.Features.Votes.Commands.Update
                     return await Result<int>.FailAsync($"Vote Not Found.");
                 }
 
-                vote.MySpaceId = (command.MySpaceId == 0) ? vote.MySpaceId : command.MySpaceId;
+                vote.KnowledgeBaseId = (command.KnowledgeBaseId == 0) ? vote.KnowledgeBaseId : command.KnowledgeBaseId;
                 await _voteRepository.UpdateAsync(vote);
                 await _unitOfWork.Commit(cancellationToken);
                 return await Result<int>.SuccessAsync(vote.Id);

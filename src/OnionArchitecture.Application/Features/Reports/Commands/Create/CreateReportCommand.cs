@@ -10,7 +10,7 @@ namespace OnionArchitecture.Application.Features.Reports.Commands.Create
 {
     public partial class CreateReportCommand : IRequest<Result<int>>
     {
-        public int MySpaceId { get; set; }
+        public int KnowledgeBaseId { get; set; }
         public string Content { get; set; }
         public bool IsProcessed { get; set; }
     }

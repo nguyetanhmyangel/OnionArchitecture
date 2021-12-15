@@ -2,6 +2,7 @@
 using OnionArchitecture.Application.Features.Attachments.Commands.Create;
 using OnionArchitecture.Application.Features.Attachments.Queries.Get;
 using OnionArchitecture.Application.Features.Attachments.Queries.GetById;
+using OnionArchitecture.Application.Features.Attachments.Queries.GetByKnowledgeBaseId;
 using OnionArchitecture.Application.Features.Attachments.Queries.GetPage;
 using OnionArchitecture.Domain.Entities;
 
@@ -13,6 +14,7 @@ namespace OnionArchitecture.Application.Mappings
         {
             CreateMap<CreateAttachmentCommand, Attachment>().ReverseMap();
             CreateMap<GetAttachmentByIdResponse, Attachment>().ReverseMap();
+            CreateMap<GetAttachmentByKnowledgeBaseIdResponse, Attachment>().ReverseMap();
             CreateMap<GetAttachmentResponse, Attachment>().ReverseMap();
             CreateMap<GetPageAttachmentResponse, Attachment>().ReverseMap();
         }

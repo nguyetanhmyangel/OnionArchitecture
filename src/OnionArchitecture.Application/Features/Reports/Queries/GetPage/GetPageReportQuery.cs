@@ -37,7 +37,7 @@ namespace OnionArchitecture.Application.Features.Reports.Queries.GetPage
             Expression<Func<Report, GetPageReportResponse>> expression = e => new GetPageReportResponse
             {
                 Id = e.Id,
-                MySpaceId = e.MySpaceId,
+                KnowledgeBaseId = e.KnowledgeBaseId,
                 Content = e.Content,
                 IsProcessed = e.IsProcessed
             };

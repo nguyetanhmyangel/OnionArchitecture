@@ -1,4 +1,4 @@
-﻿namespace OnionArchitecture.Application.Features.Enjoins.Queries.GetById
+﻿namespace OnionArchitecture.Application.Features.AppCommands.Queries.GetById
 {
     public class GetAppCommandByIdResponse
     {

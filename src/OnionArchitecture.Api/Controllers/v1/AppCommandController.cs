@@ -4,7 +4,7 @@ using OnionArchitecture.Application.Features.AppCommands.Commands.Create;
 using OnionArchitecture.Application.Features.AppCommands.Commands.Delete;
 using OnionArchitecture.Application.Features.AppCommands.Commands.Update;
 using OnionArchitecture.Application.Features.AppCommands.Queries.Get;
-using OnionArchitecture.Application.Features.Enjoins.Queries.GetById;
+using OnionArchitecture.Application.Features.AppCommands.Queries.GetById;
 
 namespace OnionArchitecture.Api.Controllers.v1
 {

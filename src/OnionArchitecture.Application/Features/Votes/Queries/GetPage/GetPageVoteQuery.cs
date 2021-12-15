@@ -37,7 +37,7 @@ namespace OnionArchitecture.Application.Features.Votes.Queries.GetPage
             Expression<Func<Vote, GetPageVoteResponse>> expression = e => new GetPageVoteResponse
             {
                 Id = e.Id,
-                MySpaceId = e.MySpaceId
+                KnowledgeBaseId = e.KnowledgeBaseId
             };
             var paginatedList = await _repository.Votes
                 .Select(expression)

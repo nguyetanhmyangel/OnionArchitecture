@@ -3,6 +3,6 @@
     public class GetVoteResponse
     {
         public int Id { get; set; }
-        public int MySpaceId { get; set; }
+        public int KnowledgeBaseId { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace OnionArchitecture.Application.Features.Attachments.Queries.GetById
         public string FileType { get; set; }
         public long FileSize { get; set; }
         public string Type { get; set; }
-        public int? MySpaceId { get; set; }
+        public int? KnowledgeBaseId { get; set; }
         public int? CommentId { get; set; }
     }
 }

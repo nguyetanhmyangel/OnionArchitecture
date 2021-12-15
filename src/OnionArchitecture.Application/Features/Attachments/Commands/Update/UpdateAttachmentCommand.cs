@@ -13,7 +13,7 @@ namespace OnionArchitecture.Application.Features.Attachments.Commands.Update
         public string FilePath { get; set; }
         public string FileType { get; set; }
         public long FileSize { get; set; }
-        public int? MySpaceId { get; set; }
+        public int? KnowledgeBaseId { get; set; }
         public int? CommentId { get; set; }
         public string Type { get; set; }
 
@@ -34,14 +34,14 @@ namespace OnionArchitecture.Application.Features.Attachments.Commands.Update
 
                 if (attachment == null)
                 {
-                    return await Result<int>.FailAsync($"Brand Not Found.");
+                    return await Result<int>.FailAsync($"Attachment Not Found.");
                 }
 
                 attachment.FileName = command.FileName ?? attachment.FileName;
                 attachment.FilePath = command.FilePath ?? attachment.FilePath;
                 attachment.FileType = command.FileType ?? attachment.FileType;
                 attachment.FileSize = command.FileSize != 0 ? command.FileSize : attachment.FileSize;
-                attachment.MySpaceId = command.MySpaceId != 0 ? command.MySpaceId : attachment.MySpaceId;
+                attachment.KnowledgeBaseId = command.KnowledgeBaseId != 0 ? command.KnowledgeBaseId : attachment.KnowledgeBaseId;
                 attachment.CommentId = command.CommentId != 0 ? command.CommentId : attachment.CommentId;
                 await _attachmentRepository.UpdateAsync(attachment);
                 await _unitOfWork.Commit(cancellationToken);

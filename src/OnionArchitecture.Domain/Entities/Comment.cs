@@ -12,8 +12,8 @@ namespace OnionArchitecture.Domain.Entities
         public string Content { get; set; }
 
         [Required]
-        public int MySpaceId { get; set; }
+        public int KnowledgeBaseId { get; set; }
 
-        public virtual MySpace MySpace { get; set; }
+        public virtual KnowledgeBase KnowledgeBase { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace OnionArchitecture.Application.Features.Reports.Commands.Update
     public class UpdateReportCommand : IRequest<Result<int>>
     {
         public int Id { get; set; }
-        public int MySpaceId { get; set; }
+        public int KnowledgeBaseId { get; set; }
         public string Content { get; set; }
         public bool IsProcessed { get; set; }
 
@@ -34,7 +34,7 @@ namespace OnionArchitecture.Application.Features.Reports.Commands.Update
                 }
 
                 report.Content = command.Content ?? report.Content;
-                report.MySpaceId = (command.MySpaceId == 0) ? report.MySpaceId : command.MySpaceId;
+                report.KnowledgeBaseId = (command.KnowledgeBaseId == 0) ? report.KnowledgeBaseId : command.KnowledgeBaseId;
                 report.IsProcessed = command.IsProcessed;
 
                 await _reportRepository.UpdateAsync(report);

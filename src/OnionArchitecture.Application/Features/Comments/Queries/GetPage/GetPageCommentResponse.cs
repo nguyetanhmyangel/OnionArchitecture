@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
         public string Content { get; set; }
-        public int MySpaceId { get; set; }
+        public int KnowledgeBaseId { get; set; }
     }
 }

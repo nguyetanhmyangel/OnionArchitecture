@@ -76,6 +76,13 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:OnionArchitecture.Api.Controllers.v1.AttachmentController.GetByKnowledgeBaseId(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="knowledgeBaseId"></param>
+            <returns></returns>
+        </member>
         <member name="M:OnionArchitecture.Api.Controllers.v1.AttachmentController.Post(OnionArchitecture.Application.Features.Attachments.Commands.Create.CreateAttachmentCommand)">
             <summary>
             

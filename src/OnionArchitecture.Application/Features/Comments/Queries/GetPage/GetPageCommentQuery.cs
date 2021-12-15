@@ -38,7 +38,7 @@ namespace OnionArchitecture.Application.Features.Comments.Queries.GetPage
             {
                 Id = e.Id,
                 Content = e.Content,
-                MySpaceId = e.MySpaceId
+                KnowledgeBaseId = e.KnowledgeBaseId
             };
             var paginatedList = await _repository.Comments
                 .Select(expression)

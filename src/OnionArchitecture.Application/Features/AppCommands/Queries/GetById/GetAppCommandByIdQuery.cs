@@ -5,7 +5,7 @@ using MediatR;
 using OnionArchitecture.Application.Interfaces.Repositories;
 using OnionArchitecture.Infrastructure.Share.Results;
 
-namespace OnionArchitecture.Application.Features.Enjoins.Queries.GetById
+namespace OnionArchitecture.Application.Features.AppCommands.Queries.GetById
 {
     public class GetAppCommandByIdQuery : IRequest<Result<GetAppCommandByIdResponse>>
     {

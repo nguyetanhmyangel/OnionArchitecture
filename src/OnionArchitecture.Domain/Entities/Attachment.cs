@@ -23,11 +23,11 @@ namespace OnionArchitecture.Domain.Entities
         [Required]
         public long FileSize { get; set; }
 
-        public int? MySpaceId { get; set; }
+        public int? KnowledgeBaseId { get; set; }
 
         public int? CommentId { get; set; }
 
-        public virtual MySpace MySpace { get; set; }
+        public virtual KnowledgeBase KnowledgeBase { get; set; }
 
         public virtual Comment Comment { get; set; }
     }

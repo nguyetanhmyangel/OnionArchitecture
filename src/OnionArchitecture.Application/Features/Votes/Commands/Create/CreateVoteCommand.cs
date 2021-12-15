@@ -10,7 +10,7 @@ namespace OnionArchitecture.Application.Features.Votes.Commands.Create
 {
     public partial class CreateVoteCommand : IRequest<Result<int>>
     {
-        public int MySpaceId { get; set; }
+        public int KnowledgeBaseId { get; set; }
     }
 
     public class CreateVoteCommandHandler : IRequestHandler<CreateVoteCommand, Result<int>>

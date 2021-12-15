@@ -9,7 +9,7 @@ namespace OnionArchitecture.Application.Features.Attachments.Queries.GetPage
         public string FilePath { get; set; }
         public string FileType { get; set; }
         public long FileSize { get; set; }
-        public int? MySpaceId { get; set; }
+        public int? KnowledgeBaseId { get; set; }
         public int? CommentId { get; set; }
         public string Type { get; set; }
     }

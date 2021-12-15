@@ -30,9 +30,9 @@ namespace OnionArchitecture.Infrastructure.Extensions
             services.AddTransient<IAppCommandFunctionRepository, AppCommandFunctionRepository>();
             services.AddTransient<IAppCommandRepository, AppCommandRepository>();
             services.AddTransient<IFunctionRepository, FunctionRepository>();
-            services.AddTransient<ILabelMySpaceRepository, LabelMySpaceRepository>();
+            services.AddTransient<ILabelKnowledgeBaseRepository, LabelKnowledgeBaseRepository>();
             services.AddTransient<ILabelRepository, LabelRepository>();
-            services.AddTransient<IMySpaceRepository, MySpaceRepository>();
+            services.AddTransient<IKnowledgeBaseRepository, KnowledgeBaseRepository>();
             services.AddTransient<IAppPermissionRepository, AppPermissionRepository>();
             services.AddTransient<IReportRepository, ReportRepository>();
             services.AddTransient<IVoteRepository, VoteRepository>();

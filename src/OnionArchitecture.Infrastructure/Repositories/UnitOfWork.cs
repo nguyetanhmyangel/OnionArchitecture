@@ -9,14 +9,14 @@ namespace OnionArchitecture.Infrastructure.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly IAuthenticatedUserService _authenticatedUserService;
+        //private readonly IAuthenticatedUserService _authenticatedUserService;
         private readonly ApplicationDbContext _dbContext;
         private bool _disposed;
 
         public UnitOfWork(ApplicationDbContext dbContext, IAuthenticatedUserService authenticatedUserService)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
-            _authenticatedUserService = authenticatedUserService;
+            //_authenticatedUserService = authenticatedUserService;
         }
 
         public async Task<int> Commit(CancellationToken cancellationToken)
